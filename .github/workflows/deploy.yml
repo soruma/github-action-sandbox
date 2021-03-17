@@ -1,10 +1,7 @@
-name: Publish
+name: Deploy
 
 on:
-  workflow_run:
-    workflows: ["Test"]
-    branches: main
-    types: completed
+  deployment
 
 jobs:
   build:
@@ -19,4 +16,4 @@ jobs:
           bundler-cache: true
 
       - name: Publish
-        run: ruby -e 'puts "Publish!!"'
+        run: ruby -e 'puts "Deploy"'
