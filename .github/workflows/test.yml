@@ -16,3 +16,6 @@ jobs:
 
       - name: Hello world
         run: ruby -e 'puts "Hello world"'
+
+      - name: Error Event
+        run: exit -1
