@@ -4,7 +4,8 @@ on:
   deployment
 
 jobs:
-  build:
+  deploy:
+    name: Deploy ${{ github.event.deployment.environment }} ${{ github.event.deployment.ref }}
     runs-on: ubuntu-latest
 
     steps:
